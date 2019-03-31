@@ -1,12 +1,12 @@
-# CONDORFRONTEND
+# apex legends
 
 ## 1. Cloning the repository
 ```
-git clone https://github.com/fabianMM04/condorFrontend.git
+git clone https://github.com/fabianMM04/apex.git
 ```
 ## 2. Install dependecies
 ```
-cd condorFrontend
+cd apex
 npm install
 ```
 ## 3. Run project

@@ -8,7 +8,7 @@ import { SearchService } from '../../services/search.service';
 export class VideoComponent implements OnInit{
 
     video:any = {};
-    private recomend ={};
+    public recomend ={};
     constructor( private activatedRoute: ActivatedRoute,
                  private _searchService: SearchService
     ) {

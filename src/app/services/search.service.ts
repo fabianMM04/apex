@@ -27,11 +27,12 @@ export class SearchService {
   youtubeView(word): Observable<any> {
 
     let headers = new HttpHeaders(
-      {'TRN-Api-Key': 'd26186cf-d270-473a-b552-a6357758f05e'});
+      { 'trn-api-key': 'd26186cf-d270-473a-b552-a6357758f05e'
+      });
 
     
 
-    return this.http.get(this.url+ word, {headers: headers} );
+    return this.http.get("/api/apex/v1/standard/profile/5/"+ word, {headers: headers} );
 
 }
 

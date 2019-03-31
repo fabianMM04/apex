@@ -15,19 +15,22 @@
       <!-- table -->
       
       <div class="col-lg-12">
-        <h3>Results for - {{youtube.name}}</h3>
+        <h3>Results for - {{youtube.name}} </h3>
         <li  class="list-group-item">
+                level: {{level}} 
+                <!--- Rank: {{rank}} -- Matado(Kills): {{kills}} -- Daño(Damages): {{damages}} -- Tiro en la cabeza(headshots): {{headshots}} -->
                 <div class="video-list media" *ngFor="let data of dataLis;">
                     <div class="media-left">
                         <img [src]="data.metadata.icon" height="200" width="300">
                     </div>
                     <div class="media-body">
                         <div class="media-heading">
-                            <strong>{{data.id}} </strong>
-                            <!--
-                                <h6 class="video-list-item-h6">{{data.snippet.channelTitle}}</h6>
-                                <p class="video-list-item-p">{{data.snippet.description}}</p>
-                            -->
+                            <strong>{{data.metadata.legend_name}} </strong>
+                                <div *ngFor="let data of data.stats;">
+                                    <h6 class="video-list-item-h6">{{data.metadata.name}}:{{data.value}}</h6>
+                                </div>
+                                
+                            
                             
                         </div>
                     </div>

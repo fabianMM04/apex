@@ -10,7 +10,13 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 })
 export class SearchComponent implements OnInit {
   public youtube: Youtube;
-  private dataLis =[];
+  public dataLis =[];
+  public level =String;
+  public rank = String;
+  public kills = String;
+  public damages = String;
+  public headshots = String;
+  
 
   constructor(
   
@@ -38,6 +44,11 @@ export class SearchComponent implements OnInit {
         response=>{
         
          this.dataLis = response.data.children;
+         this.level = response.data.metadata.level;
+         //this.rank = response.data.stats[3].rank;
+         //this.kills = response.data.stats[1].value;
+         //this.damages = response.data.stats[2].value;
+         //this.headshots = response.data.stats[3].value;
          
          
         }, 
